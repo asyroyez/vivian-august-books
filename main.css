@@ -9,6 +9,8 @@
   --ff-accent: 'Merriweather', serif;
 }
 
+/* CSS reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -22,9 +24,6 @@ html {
 }
 
 body {
-  background-image: url(/bg-image-home.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   font-family: var(--ff-primary);
   line-height: 1.4;
 }
@@ -37,22 +36,29 @@ br {
   display: none;
 }
 
+/* Nav Styles */
+
 .nav-list {
   background-color: var(--clr-neutral-100);
   list-style: none;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border: 0.1em solid var(--clr-neutral-900);
 }
 
 .nav-list li {
 }
 
 .nav-link {
+  border-left: 0.1em solid var(--clr-neutral-900);
   color: #000;
   float: right;
   display: block;
-  padding: 1em;
-  margin: 0 2em 0 2em;
+  padding: 0.25em 1.8em 0.25em 1.8em;
   font-size: 2em;
+  text-align: center;
 }
 
 .nav-link:hover {
@@ -61,5 +67,32 @@ br {
 
 .nav-link:active {
   background-color: var(--clr-primary-400);
+  color: #fff;
+}
+
+/* Landing page styles */
+
+.landing-wrapper {
+  background-image: url(/bg-image-home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center -10em;
+  height: 100vh;
+}
+
+.landing-welcome-wrapper {
+  margin: 0 5em;
+  padding: 10em 5em;
+  display: block;
+  /* background-color: rgba(rgb(228, 153, 153); */
+}
+
+.landing-welcome-wrapper h1 {
+  font-size: 10em;
+  color: #fff;
+}
+
+.landing-welcome-wrapper h2 {
+  font-size: 6em;
   color: #fff;
 }
