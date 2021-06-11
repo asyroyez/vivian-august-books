@@ -2,8 +2,8 @@
   --clr-primary-200: #d6a8e1;
   --clr-primary-400: #a463b5;
 
-  --clr-neutral-100: #f7ebddbd;
-  --clr-neutral-900: #bbbbbbc2;
+  --clr-neutral-100: #f7ebdd;
+  --clr-neutral-900: #bbbbbb;
 
   --ff-primary: 'Open Sans', sans-serif;
   --ff-accent: 'Merriweather', serif;
@@ -21,6 +21,17 @@
 
 html {
   font-size: 62.5%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 body {
@@ -114,9 +125,9 @@ br {
 
 .books-wrapper {
   --gap: 1.2em;
-  height: 65vh;
+  height: 100vh;
   display: inline-flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   /* align-items: flex-start; */
   flex-direction: row;
@@ -127,12 +138,4 @@ br {
 
 .books-wrapper > div {
   margin: var(--gap) 0 0 var(--gap);
-  background-color: #f1f1f1;
-  width: 10em;
-  min-width: 5em;
-  height: 14em;
-  padding: 1em;
-  text-align: center;
-  /* line-height: 75px; */
-  font-size: 3em;
 }
