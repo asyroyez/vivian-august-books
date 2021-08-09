@@ -9,12 +9,18 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="main.css" />
-    <title>Welcome | Vivian August Books</title>
+    <link
+      rel="stylesheet"
+      href="main.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <title>Vivian August Books</title>
   </head>
   <body>
     <header>
-      <!-- logo -->
+      <div class="nav-logo"><h1>LoGo</h1></div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
       <nav>
         <ul class="list nav-list">
           <li><a href="#top" class="nav-link">Home</a></li>
@@ -22,29 +28,62 @@
           <li><a href="#connect" class="nav-link">Connect</a></li>
         </ul>
       </nav>
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
     </header>
     <main>
-      <section id="top" class="box landing-box">
-        <div class="card landing-welcome-card">
+      <section id="top" class="landing-box">
+        <div class="card welcome-card">
           <h1>Hi,</h1>
           <h2>and welcome to my world.</h2>
         </div>
-        <div class="card landing-newsletter-card">
-          <h3>Subscribe to my awesome newsletter:</h3>
+        <div class="card newsletter-card">
+          <h1>Subscribe to my awesome newsletter:</h1>
           <button class="newsletter-sub-button">Subscribe</button>
           <!--This element needs to be worked out with client-->
         </div>
       </section>
       <br />
-      <section id="books" class="box books-box">
+      <section id="books" class="books-box">
         <h1>Books Section</h1>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+        <ul class="list books-list">
+          <li class="books-card">
+            <a href="AMAZON_LINK"
+              ><img
+                src="/assets/covers/book-cover.img"
+                alt="BOOK_SPECS"
+              />ONE</a
+            >
+          </li>
+          <li class="books-card">
+            <a href="AMAZON_LINK"
+              ><img
+                src="/assets/covers/book-cover.img"
+                alt="BOOK_SPECS"
+              />TWO</a
+            >
+          </li>
+          <li class="books-card">
+            <a href="AMAZON_LINK"
+              ><img
+                src="/assets/covers/book-cover.img"
+                alt="BOOK_SPECS"
+              />THREE</a
+            >
+          </li>
+          <li class="books-card">
+            <a href="AMAZON_LINK"
+              ><img
+                src="/assets/covers/book-cover.img"
+                alt="BOOK_SPECS"
+              />FOUR</a
+            >
+          </li>
+        </ul>
+        <!-- <img src="" alt="" sizes="" srcset=""> -->
+        <!-- Find out about img sizes property re: serving best size for media -->
       </section>
       <br />
-      <section id="connect" class="box connect-box">
+      <section id="connect" class="connect-box">
         <div class="card connect-card">
           <h1>Connect Section</h1>
           <h4>Hey there, you can follow me places!</h4>
