@@ -11,19 +11,27 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="main.css"
       media="print"
       onload="this.media='all'"
     />
+    <script
+      type="text/javascript"
+      src="assets/js/newsletter-sign-up.js"
+    ></script>
     <title>Vivian August Books</title>
   </head>
   <body>
     <header>
-      <div class="nav-logo"><h1>LoGo</h1></div>
+      <div class="nav-logo"><h1>Logo</h1></div>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
       <nav>
         <ul class="list nav-list">
-          <li><a href="#top" class="nav-link">Home</a></li>
+          <li><a href="#landing" class="nav-link">Home</a></li>
           <li><a href="#books" class="nav-link">Books</a></li>
           <li><a href="#connect" class="nav-link">Connect</a></li>
         </ul>
@@ -31,22 +39,33 @@
       <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
     </header>
     <main>
-      <section id="top" class="landing-box">
+      <section id="landing" class="landing-box">
         <div class="card welcome-card">
-          <h1>Hi,</h1>
-          <h2>and welcome to my world.</h2>
+          <h1>Coming Soon!</h1>
+          <img
+            src="/assets/covers/boyfriend-agreement-cover.svg"
+            alt="Book cover for The Boyfriend Agreement"
+          />
+          <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+            explicabo soluta quae dolore et. Quis ipsum quisquam, numquam
+            maxime, tempore, dolore repellendus facilis velit fugiat quas
+            laudantium quod. Obcaecati esse ipsum, quis et dolorem iure aliquam
+            minus deserunt aperiam libero voluptatibus praesentium illum
+            distinctio debitis consequatur laudantium sit delectus consectetur.
+          </h2>
         </div>
-        <div class="card newsletter-card">
-          <h1>Subscribe to my awesome newsletter!</h1>
-          <button class="newsletter-sub-button">Subscribe</button>
-          <!--This element needs to be worked out with client-->
-        </div>
+        <!-- Newsletter -->
+        <div
+          class="ml-form-embed"
+          data-account="2822512:r7z9x6b4m6"
+          data-form="4250080:o5o2z1"
+        ></div>
       </section>
       <br />
       <section id="books" class="books-box">
-        <h1>Books Section</h1>
         <ul class="list books-list">
-          <li class="books-card">
+          <li class="card books-card">
             <a href="AMAZON_LINK"
               ><img
                 src="/assets/covers/book-cover.img"
@@ -85,18 +104,32 @@
       <br />
       <section id="connect" class="connect-box">
         <div class="card connect-card">
-          <h1>Connect Section</h1>
-          <h4>Hey there, you can follow me places!</h4>
+          <img src="/assets/contant-me-img.jpeg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sunt
+            cupiditate est, aspernatur porro ut, dolore maxime cum quidem
+            ducimus excepturi ipsa adipisci vero praesentium doloremque, ex
+            fugit laudantium quod debitis? Quia, nemo ab odio nesciunt
+            architecto incidunt? Error tempora quisquam exercitationem dolores
+            quasi nam numquam velit quae inventore sapiente? Tenetur fugit
+            provident porro possimus minima modi sed, odit ratione mollitia in,
+            repellat corporis quibusdam voluptates magni obcaecati iste nam
+            facilis. Voluptatibus, ipsam nostrum voluptatem nesciunt placeat
+            voluptas, numquam vitae libero, officiis error dolorem magni officia
+            doloremque et fugiat. Molestiae non perspiciatis aspernatur magnam
+            iste neque repellat possimus sint iusto.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+            corporis autem dicta aliquam tempora officiis deserunt delectus,
+            assumenda voluptas, saepe inventore! Incidunt, nisi? Molestias a
+            doloremque velit quas totam iusto nesciunt asperiores aliquam vero,
+            eveniet, at ad temporibus modi tenetur saepe optio quidem aut labore
+            repellat cupiditate! Dicta, libero ut?
+          </p>
         </div>
       </section>
     </main>
-    <footer>
-      <ul class="list social-list">
-        <li><a href="http://twitter.com">Twitter</a></li>
-        <li><a href="facebook.com">facebook</a></li>
-        <li><a href="youtube.com">YouTube</a></li>
-        <li><a href="discord.com">Discord</a></li>
-      </ul>
-    </footer>
+    <footer></footer>
   </body>
 </html>
