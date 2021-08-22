@@ -64,6 +64,7 @@ body {
   font-size: var(--ff-size);
   line-height: var(--ln-height);
   font-family: var(--ff-primary);
+  background-color: var(--clr-neutral);
 }
 
 section {
@@ -76,13 +77,20 @@ section {
 .card {
   display: flex;
   padding: 2.5em;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
-  flex: 1 1 10em;
+  flex: 0 0 10em;
   /* flex combines flex-shrink, flex-grow, flex-basis */
 }
+
+/* .card-row {
+  display: flex;
+}
+
+.card-column {
+  flex: 1;
+} */
 
 .list {
   list-style: none;
@@ -189,24 +197,40 @@ nav a:active {
 /* Landing */
 
 .landing-box {
-  grid-template-rows: 1fr 0.3fr;
+  /* grid-template-rows: 1fr 0.3fr; */
 }
 
-.welcome-card {
-  background-color: var(--clr-neutral);
-  padding: 1em;
-}
-
-.welcome-card h1 {
+.landing-box h1 {
   font-family: var(--ff-accent);
   color: var(--clr-primary-600);
   font-size: 4.5em;
+  padding-top: 1em;
 }
 
-.welcome-card h2 {
+.welcome-card {
+  padding: 1em;
+}
+
+/* .welcome-card h1 {
+  font-family: var(--ff-accent);
+  color: var(--clr-primary-600);
+  font-size: 4.5em;
+  padding-top: 1em;
+} */
+
+.welcome-card img {
+  /* padding: 1em; */
+  width: 70%;
+  border: solid var(--clr-highlight) 0.4em;
+}
+
+.welcome-card img:hover {
+}
+
+.welcome-card p {
   font-family: var(--ff-primary);
   color: var(--clr-primary-400);
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 /* Books */
@@ -214,7 +238,6 @@ nav a:active {
   /* align-content: center;
   grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
   grid-gap: 2em; */
-  background-color: var(--clr-neutral);
 }
 
 .books-card {
@@ -223,7 +246,6 @@ nav a:active {
 /* Connect */
 
 .connect-box {
-  background-color: var(--clr-neutral);
 }
 
 .connect-box img {
@@ -246,13 +268,12 @@ footer {
 }
 
 /* Desktop Styles */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 760px) {
   .nav-toggle-label {
     display: none;
   }
 
   main {
-    background: var(--clr-neutral-100);
   }
 
   header {
