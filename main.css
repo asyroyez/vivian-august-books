@@ -72,25 +72,18 @@ section {
   grid-template-columns: 1fr;
   min-width: 100vw;
   min-height: 100vh;
+  font-size: 1.8em;
 }
 
 .card {
   display: flex;
-  padding: 2.5em;
-  flex-flow: row wrap;
+  padding: 1.5em;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   flex: 0 0 10em;
   /* flex combines flex-shrink, flex-grow, flex-basis */
 }
-
-/* .card-row {
-  display: flex;
-}
-
-.card-column {
-  flex: 1;
-} */
 
 .list {
   list-style: none;
@@ -116,10 +109,6 @@ nav {
 }
 
 .nav-logo {
-  font-size: 3em;
-}
-
-nav ul {
 }
 
 nav li {
@@ -200,28 +189,20 @@ nav a:active {
   /* grid-template-rows: 1fr 0.3fr; */
 }
 
-.landing-box h1 {
-  font-family: var(--ff-accent);
-  color: var(--clr-primary-600);
-  font-size: 4.5em;
-  padding-top: 1em;
-}
-
 .welcome-card {
-  padding: 1em;
 }
 
-/* .welcome-card h1 {
+.welcome-card h1 {
   font-family: var(--ff-accent);
   color: var(--clr-primary-600);
-  font-size: 4.5em;
-  padding-top: 1em;
-} */
+  font-size: 2.5em;
+  margin-top: 1em;
+}
 
 .welcome-card img {
-  /* padding: 1em; */
   width: 70%;
   border: solid var(--clr-highlight) 0.4em;
+  margin: 1em 0;
 }
 
 .welcome-card img:hover {
@@ -230,45 +211,50 @@ nav a:active {
 .welcome-card p {
   font-family: var(--ff-primary);
   color: var(--clr-primary-400);
-  font-size: 1.8em;
 }
 
 /* Books */
 .books-box {
-  /* align-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
-  grid-gap: 2em; */
+  margin-top: 1em;
 }
 
-.books-card {
+.books-card img {
+  border: solid var(--clr-highlight) 0.4em;
 }
 
 /* Connect */
-
-.connect-box {
-}
 
 .connect-box img {
   max-width: 100%;
   height: auto;
 }
 
-.connect-card p {
-  font-size: 2em;
-  /* padding: 1em 0; */
+.social-card {
+  flex-flow: row;
+  justify-content: left;
 }
 
+.social-card i {
+  padding-right: 0.5em;
+}
 /* Social Media / Footer */
 footer {
-  background-color: #6a6aa2;
+  display: flex;
+  background: var(--clr-primary-200);
+  /* justify-content: center; */
 }
 
-.social-list {
-  display: flex;
+footer i {
+  /* padding: .2em; */
+}
+
+footer p {
+  font-size: 1.8em;
+  padding-right: 1em;
 }
 
 /* Desktop Styles */
-@media screen and (min-width: 760px) {
+/* @media screen and (min-width: 760px) {
   .nav-toggle-label {
     display: none;
   }
@@ -325,4 +311,4 @@ footer {
   nav a:hover::before {
     transform: scale(1, 1);
   }
-}
+} */
