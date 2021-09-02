@@ -19,12 +19,15 @@
       media="print"
       onload="this.media='all'"
     />
-    <script src="https://kit.fontawesome.com/8c516cc765.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/8c516cc765.js"
+      crossorigin="anonymous"
+    ></script>
     <script
       type="text/javascript"
       src="assets/js/newsletter-sign-up.js"
     ></script>
-    <title>Vivian August Books</title>
+    <title>Welcome | Vivian August</title>
   </head>
   <body>
     <header>
@@ -40,34 +43,37 @@
       <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
     </header>
     <main>
-      <section id="landing" class="landing-box">
-        <div class="card welcome-card">
-          <h1>Coming Soon!</h1>
-          <img
-            src="/assets/covers/ebook-cover-500.jpg"
-            srcset="
-              /assets/covers/ebook-cover-1600.jpg 1600w,
-              /assets/covers/ebook-cover-1000.jpg 1000w,
-              /assets/covers/ebook-cover-500.jpg   500w
-            "
-            sizes="(min-width: 1080px) 25vw, 50vw"
-            alt=""
-          />
-          <p>
-            A dork-turned-model. A former tabloid hot mess who’s back on the
-            press’s bad side. A fake relationship that’s supposed to be just
-            that — fake. But trying to keep it that way is easier said than
-            done.
-          </p>
-        </div>
-        <div
-          class="ml-form-embed"
-          data-account="2822512:r7z9x6b4m6"
-          data-form="4250080:o5o2z1"
-        ></div>
+      <section id="landing" class="grid-wrapper">
+        <ul class="auto-grid">
+          <li class="card landing-card">
+            <h1>Coming Soon!</h1>
+            <img
+              src="/assets/covers/ebook-cover-500.jpg"
+              srcset="
+                /assets/covers/ebook-cover-1600.jpg 1600w,
+                /assets/covers/ebook-cover-1000.jpg 1000w,
+                /assets/covers/ebook-cover-500.jpg   500w
+              "
+              sizes="(min-width: 1080px) 25vw, 50vw"
+              alt=""
+            />
+            <p>
+              A dork-turned-model. A former tabloid hot mess who’s back on the
+              press’s bad side. A fake relationship that’s supposed to be just
+              that — fake. But trying to keep it that way is easier said than
+              done.
+            </p>
+          </div>
+          <li
+            class="ml-form-embed newsletter"
+            data-account="2822512:r7z9x6b4m6"
+            data-form="4250080:o5o2z1"
+          ></li>
+      </ul>
       </section>
       <br />
-      <section id="books" class="books-box">
+      <section id="books" class="grid-wrapper">
+        <ul class="auto-grid">
           <li class="card books-card">
             <a href="book-pages/book-page-template.html">
               <img
@@ -77,11 +83,16 @@
                   /assets/covers/ebook-cover-1000.jpg 1000w,
                   /assets/covers/ebook-cover-500.jpg   500w
                 "
-                sizes="(min-width: 1080px) 50vw, 75vw"
-
+                sizes="(min-width: 1080px) 25vw, 75vw"
                 alt=""
-            /></a>
-            <h1>Book Title</h1>
+              />
+            </a>
+            <a href="book-pages/book-page-template.html"><h1>Book Title</h1></a>
+            <a href="#"
+              ><button class="amazon-button" onclick="_click">
+                Buy on Amazon
+              </button></a
+            >
           </li>
           <li class="card books-card">
             <a href="book-pages/book-page-template.html">
@@ -92,10 +103,16 @@
                   /assets/covers/ebook-cover-1000.jpg 1000w,
                   /assets/covers/ebook-cover-500.jpg   500w
                 "
-                sizes="(min-width: 1080px) 50vw, 75vw"
+                sizes="(min-width: 1080px) 25vw, 75vw"
                 alt=""
-            /></a>
-            <h1>Book Title</h1>
+              />
+            </a>
+            <a href="book-pages/book-page-template.html"><h1>Book Title</h1></a>
+            <a href="#"
+              ><button class="amazon-button" onclick="_click">
+                Buy on Amazon
+              </button></a
+            >
           </li>
           <li class="card books-card">
             <a href="book-pages/book-page-template.html">
@@ -106,10 +123,16 @@
                   /assets/covers/ebook-cover-1000.jpg 1000w,
                   /assets/covers/ebook-cover-500.jpg   500w
                 "
-                sizes="(min-width: 1080px) 50vw, 75vw"
+                sizes="(min-width: 1080px) 25vw, 75vw"
                 alt=""
-            /></a>
-            <h1>Book Title</h1>
+              />
+            </a>
+            <a href="book-pages/book-page-template.html"><h1>Book Title</h1></a>
+            <a href="#"
+              ><button class="amazon-button" onclick="_click">
+                Buy on Amazon
+              </button></a
+            >
           </li>
           <li class="card books-card">
             <a href="book-pages/book-page-template.html">
@@ -120,10 +143,16 @@
                   /assets/covers/ebook-cover-1000.jpg 1000w,
                   /assets/covers/ebook-cover-500.jpg   500w
                 "
-                sizes="(min-width: 1080px) 50vw, 75vw"
+                sizes="(min-width: 1080px) 25vw, 75vw"
                 alt=""
-            /></a>
-            <h1>Book Title</h1>
+              />
+            </a>
+            <a href="book-pages/book-page-template.html"><h1>Book Title</h1></a>
+            <a href="#"
+              ><button class="amazon-button" onclick="_click">
+                Buy on Amazon
+              </button></a
+            >
           </li>
         </ul>
       </section>
@@ -151,7 +180,7 @@
     <footer>
       <i class="fas fa-paper-plane fa-3x"></i>
       <p>hello@VivianAugust.com</p>
-      <i class="fab fa-instagram fa-3x"></i>
+      <a href="#"><i class="fab fa-instagram fa-3x"></i></a>
     </footer>
   </body>
 </html>

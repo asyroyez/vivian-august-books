@@ -1,10 +1,12 @@
 :root {
   /* Colors */
+
   --clr-primary-200: hsla(321, 47%, 66%, 1);
   --clr-primary-400: hsla(322, 57%, 40%, 1);
   --clr-primary-600: hsla(321, 95%, 17%, 1);
 
   --clr-neutral: hsla(300, 55%, 96%, 1);
+  --clr-neutral-alt: hsla(300, 55%, 90%, 1);
   --clr-highlight: hsla(323, 100%, 48%, 1);
 
   /* Typography */
@@ -35,31 +37,8 @@ img {
   display: block;
 }
 
-/* Invisible Scrollbar */
-
-html {
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-html::-webkit-scrollbar {
-  display: none;
-}
-
-/* Smooth :hover Transitions */
-
-a {
-  text-decoration: none;
-  transition: background 300ms ease;
-  -webkit-transition: background 300ms ease;
-  -moz-transition: background 300ms ease;
-  -o-transition: background 300ms ease;
-  -ms-transition: background 300ms ease;
-}
-
 /* Defaults */
+
 body {
   font-size: var(--ff-size);
   line-height: var(--ln-height);
@@ -75,9 +54,62 @@ section {
   font-size: 1.8em;
 }
 
+ul {
+  list-style: none;
+}
+
+i {
+  color: #000;
+}
+
+/* Defaults - Invisible Scrollbar */
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Defaults - Smooth :hover Transitions */
+
+a {
+  text-decoration: none;
+  transition: background 300ms ease;
+  -webkit-transition: background 300ms ease;
+  -moz-transition: background 300ms ease;
+  -o-transition: background 300ms ease;
+  -ms-transition: background 300ms ease;
+}
+
+/* Responsive Grid */
+
+.grid-wrapper {
+  max-width: 65rem;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding: 0 1rem; */
+}
+
+.auto-grid {
+  --auto-grid-min-size: 25rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 1rem;
+}
+
+/* Flexbox Card */
+
 .card {
   display: flex;
-  padding: 1.5em;
+  padding: 1em;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
@@ -85,8 +117,68 @@ section {
   /* flex combines flex-shrink, flex-grow, flex-basis */
 }
 
-.list {
-  list-style: none;
+.card > * {
+  margin: 0.5em 0;
+}
+
+.card img {
+  border: solid var(--clr-highlight) 0.2em;
+  max-width: 100%;
+  height: auto;
+}
+
+.card h1 {
+  font-family: var(--ff-accent);
+  color: var(--clr-primary-600);
+  font-size: 1.6em;
+}
+
+.landing-card {
+  flex-flow: row wrap;
+  justify-content: top;
+  align-items: center;
+}
+
+.card p {
+  font-family: var(--ff-primary);
+  color: var(--clr-primary-400);
+}
+
+.books-card:nth-child(even) {
+  background-color: var(--clr-neutral-alt);
+}
+
+.book-card {
+  font-size: 1.8em;
+}
+
+.newsletter {
+}
+
+/* Amazon Button */
+
+.amazon-button {
+  background-color: #ff9900;
+  color: #000;
+  border: none;
+  padding: 1em 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 2em;
+  transition-duration: 0.4s;
+  box-shadow: 0 0.8em 1.6em 0 rgba(0, 0, 0, 0.2),
+    0 0.6em 2em 0 rgba(0, 0, 0, 0.19);
+}
+
+.amazon-button:hover {
+  background-color: #000;
+  color: #ff9900;
+}
+
+.amazon-button:active {
+  background-color: #ff9900;
+  color: #000;
 }
 
 /* Nav */
@@ -126,13 +218,13 @@ nav a {
   transition: opacity 150ms ease-in-out;
 }
 
-/* Add transition to make it smooth */
+/* Nav - Add transition to make it smooth */
 nav a:active {
   background-color: var(--clr-primary-600);
   color: #fff;
 }
 
-/* CSS-Only Hamburger Menu */
+/* Nav - CSS-Only Hamburger Menu */
 
 .nav-toggle {
   display: none;
@@ -185,42 +277,7 @@ nav a:active {
 
 /* Landing */
 
-.landing-box {
-  /* grid-template-rows: 1fr 0.3fr; */
-}
-
-.welcome-card {
-}
-
-.welcome-card h1 {
-  font-family: var(--ff-accent);
-  color: var(--clr-primary-600);
-  font-size: 2.5em;
-  margin-top: 1em;
-}
-
-.welcome-card img {
-  width: 70%;
-  border: solid var(--clr-highlight) 0.4em;
-  margin: 1em 0;
-}
-
-.welcome-card img:hover {
-}
-
-.welcome-card p {
-  font-family: var(--ff-primary);
-  color: var(--clr-primary-400);
-}
-
 /* Books */
-.books-box {
-  margin-top: 1em;
-}
-
-.books-card img {
-  border: solid var(--clr-highlight) 0.4em;
-}
 
 /* Connect */
 
@@ -237,6 +294,7 @@ nav a:active {
 .social-card i {
   padding-right: 0.5em;
 }
+
 /* Social Media / Footer */
 footer {
   display: flex;
